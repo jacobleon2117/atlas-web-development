@@ -2,7 +2,6 @@ html {
 
 }
 
-/* flexbox classes */
 .container {
     display: flex;
 }
@@ -16,7 +15,6 @@ html {
     width: 100%;
 }
 
-/* tag styles */
 
 header {
     background-image: url("./images/header_image.bmp");
