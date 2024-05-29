@@ -1,21 +1,521 @@
-html {
+@font-face {
+    font-family: "SourceSans-1";
+    src: url("./fonts/SourceSansPro-ExtraLight.otf");
+  }
+  
+  @font-face {
+    font-family: "SourceSans-2";
+    src: url("./fonts/SourceSansPro-Light.otf");
+  }
+  
+  @font-face {
+    font-family: "SourceSans-3";
+    src: url("./fonts/SourceSansPro-Regular.otf");
+  }
+  
+  @font-face {
+    font-family: "SourceSans-4";
+    src: url("./fonts/SourceSansPro-Semibold.otf");
+  }
+  
+  @font-face {
+    font-family: "SourceSans-5";
+    src: url("./fonts/SourceSansPro-Bold.otf");
+  }
+  
+  /* Italics */
+  @font-face {
+    font-family: "SourceSans-1i";
+    src: url("./fonts/SourceSansPro-ExtraLightIt.otf");
+  }
+  @font-face {
+    font-family: "SourceSans-2i";
+    src: url("./fonts/SourceSansPro-LightIt.otf");
+  }
+  @font-face {
+    font-family: "SourceSans-3i";
+    src: url("./fonts/SourceSansPro-It.otf");
+  }
+  @font-face {
+    font-family: "SourceSans-4i";
+    src: url("./fonts/SourceSansPro-SemiboldIt.otf");
+  }
+  @font-face {
+    font-family: "SourceSans-5i";
+    src: url("./fonts/SourceSansPro-BoldIt.otf");
+  }
 
-}
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
 
-.container {
+  html {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
+  html::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "SourceSans-3";
+    background-color: rgba(7, 22, 41, 1);;
+  }
+  
+  header {
     display: flex;
-}
-
-.column {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background-image: url("./images/background.png");
+    height: 76vw;
+    background-color: #071629;
+  }
+  
+  .nav {
+    width: 77%;
     display: flex;
-}
-
-.row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.5%;
+  }
+  
+  .nav img {
+    width: 11vw;
+  }
+  
+  .nav_bar {
     display: flex;
-    width: 100%;
-}
+    width: 22%;
+    justify-content: space-between;
+  }
+  
+  .nav_link {
+    font-weight: 700;
+    font-size: .8vw;
+    color: white;
+    font-family: "SourceSans-5";
+  }
 
+  .banner {
+    width: 75%;
+    color: white;
+    box-sizing: border-box;
+  }
+  
+  .banner_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4.1%;
+  }
+  
+  .banner_hero>h1 {
+    font-family: "SourceSans-5";
+    font-size: 8.4vw;
+  }
+  
+  .banner_hero>p {
+    font-weight: 700;
+    font-size: 1.1vw;
+    margin-top: -10%;
+    display: flex;
+    justify-content: space-between;
+    width: 24%;
+  }
+  
+  .banner_hero>button {
+    background-color: #C271FF;
+    font-family: "SourceSans-4";
+    border-radius: 50px;
+    border: none;
+    color: white;
+    box-shadow: 0px 2px 20px 0px #00000080;
+    font-size: 1vw;
+    padding: 1.3%;
+    width: 15.5%;
+    margin-top: 2%;
+    font-weight: 600;
+  }
+  
+  .banner_pro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner_pro_title {
+    margin-top: 15%;
+    margin-bottom: 9%;
+    font-family: "SourceSans-1";
+    font-weight: 300;
+    font-size: 2.3vw;
+  }
+  
+  .banner_pro_title>span {
+    color: #C271FF;
+    font-family: "SourceSans-5";
+  }
+  
+  .banner_pro_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: 1%;
+  }
+  .pros {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .pros>img {
+    width: 10vw;
+    margin: 0;
+    border-radius: 50px;
+  }
+  
+  .pros>h3 {
+    font-family: "SourceSans-5";
+    font-size: 1.3vw;
+    margin: 0;
+    margin-top: 5%;
+    font-weight: 900;
+  }
+  
+  .pros>p {
+    font-family: "SourceSans-2i";
+    font-size: 1.1vw;
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 400;
+  }
 
-header {
-    background-image: url("./images/header_image.bmp");
-}
+  /* main */
+  .quote_section {
+    background-color: #C271FF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6%;
+  }
+  
+  .quote_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+  }
+  
+  .quote_img {
+    width: 11vw;
+    height: 11vw;
+    margin-right: 4%;
+    border-radius: 50px;
+  }
+  
+  .quotes_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 15vw;
+    font-size: 1.5vw;
+  }
+  
+  .quote {
+    font-family: "SourceSans-3";
+    margin: 0;
+    margin-bottom: 2%;
+    font-weight: 400;
+  }
+  
+  .quote_name {
+    font-family: "SourceSans-5";
+    margin-bottom: 1%;
+    font-weight: 700;
+  }
+  
+  .quote_subtitle {
+    font-family: "SourceSans-3i";
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  .vid_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+    background-color: white;
+    height: 39.5vw;
+  }
+  
+  .vid_title {
+    font-family: "SourceSans-1";
+    font-size: 2.3vw;
+    font-weight: 300;
+  }
+  
+  .video_title>span {
+    font-family: "SourceSans-5";
+    color: #C271FF;
+  }
+  
+  .vid_container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 2.7%;
+    margin-bottom: 6%;
+  }
+  
+  .video {
+    margin: 1%;
+  }
+  .img_stack {
+  width: 17.5vw;
+  height: 10.6vw;
+  position: relative;
+  }
+  
+  .thumbnail {
+    width: 17.5vw;
+    height: auto;
+    border-top-left-radius: .2vw;
+    border-top-right-radius: .2vw;
+  }
+  .play_button {
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    width: 25%;
+  }
+  
+  .vid_info {
+    width: 85%;
+    margin-left: 5%;
+  }
+  
+  .vid_title {
+    font-family: "SourceSans-5";
+    font-size: 1.2vw;
+  }
+  
+  .vid_description {
+    font-family: "SourceSans-1";
+    font-size: 1vw;
+    color: rgba(7, 22, 41, 0.5);
+    font-weight: 600;
+    line-height: 1.2rem;
+  }
+  
+  .vid_author {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .vid_author>img {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50px;
+  }
+  
+  .vid_name {
+    font-family: "SourceSans-2";
+    color: #C271FF;
+    font-size: 1vw;
+    margin-top: 2.5%;
+    margin-left: 5%;
+    font-weight: 600;
+  }
+  
+  .vid_stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: -5%;
+  }
+  .vid_stars {
+    width: 50%;
+  }
+  .vid_stars_pic>img {
+    width: 1vw;
+    margin: 1.5%;
+  }
+  .vid_duration {
+    font-family: "SourceSans-4";
+    color: #C271FF;
+    font-size: 1vw;
+    font-weight: 600;
+  }
+  
+  .member_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 35vw;
+  }
+  
+  .member_header {
+    font-family: "SourceSans-1";
+    font-weight: 300;
+    font-size: 2.3vw;
+    margin-bottom: 3%;
+  }
+  
+  .member_header>span {
+    font-family: "SourceSans-5";
+    font-weight: 700;
+    color: #C271FF;
+  }
+  
+  .member_container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+  
+  .member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .member>img {
+    width: 3vw;
+    margin-bottom: 3%;
+  }
+  
+  .member_title {
+    font-size: 1.3vw;
+    margin-bottom: 1%;
+    font-weight: 500;
+  }
+  
+  .member_sub {
+    font-size: 1vw;
+    text-align: center;
+    width: 60%;
+    font-family: "SourceSans-1";
+    font-weight: 400;
+    line-height: 1.3rem;
+  }
+  
+  .member_button {
+    font-family: "SourceSans-4";
+    border-radius: 50px;
+    border: none;
+    color: white;
+    box-shadow: 0px 2px 20px 0px #00000080;
+    width: 11%;
+    font-size: 1vw;
+    margin-top: 5%;
+    font-weight: 600;
+    padding: .8%;
+    background-color: #C271FF;
+  }
+  
+  .faq_section {
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    height: 60vw;
+    display: flex;
+  }
+  
+  .faq_title {
+    font-family: "SourceSans-2";
+    font-weight: 500;
+    margin-top: 4vw;
+    font-size: 4vw;
+  }
+  
+  .faq_container {
+    width: 80%;
+  }
+  
+  .faq_container_row {
+    display: flex;
+    margin-bottom: 2vw;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  
+  .faq {
+    margin-bottom: 3vw;
+    width: 31%;
+  }
+  
+  .faq_header {
+    font-family: "SourceSans-5";
+    font-weight: 700;
+    margin-bottom: 2vw;
+    font-size: 1.2vw;
+  }
+  
+  .faq_answer {
+    font-size: 1vw;
+    line-height: 1.6em;
+    font-family: "SourceSans-3";
+    font-weight: 400;
+    color: rgba(7, 22, 41, 0.4);
+  }
+  
+  footer {
+    height: 10.5vw;
+  }
+  
+  .footer_container {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 7vw;
+  }
+  
+  .footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 75%;
+  }
+  
+  .footer_logo {
+    height: 2vw;
+    width: 11vw;
+  }
+  
+  .footer_links>a {
+    margin: .6vw;
+  }
+  
+  .footer_links>a>img {
+    width: 2.1vw;
+  }
+  
+  .copyright {
+    margin-top: 4.5vw;
+    font-size: .8vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .3);
+  }
