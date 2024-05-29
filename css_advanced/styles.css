@@ -1,0 +1,23 @@
+html {
+
+}
+
+/* flexbox classes */
+.container {
+    display: flex;
+}
+
+.column {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+/* tag styles */
+
+header {
+    background-image: url("./images/header_image.bmp");
+}
